@@ -32,9 +32,9 @@ const Footer = () => {
           <li>Enterprise Solutions</li>
         </ul>
       </div>
-      <div className="flex" style={{verticalAlign: "middle"}}>
+      <div className="flex items-center">
         Follow Us
-        <CiFacebook style={{verticalAlign: "middle"}} />
+        <CiFacebook />
         <CiLinkedin />
         <CiTwitter />
         <CiYoutube />
