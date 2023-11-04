@@ -8,6 +8,8 @@ import {
 const Header = () => {
   const [auth, setAuth] = useState(false);
 
+  setAuth(false);
+
   return (
     <header className="flex justify-between px-5">
       {
