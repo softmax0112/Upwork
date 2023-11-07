@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import {
@@ -8,7 +8,9 @@ import {
 const Header = () => {
   const [auth, setAuth] = useState(false);
 
-  setAuth(false);
+  useEffect(() => {
+    setAuth(false);
+  }, []);
 
   return (
     <header className="flex justify-between px-5">
