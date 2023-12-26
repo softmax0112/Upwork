@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom";
+
 const Signup = () => {
   return (
     <div>
-      <div>Signup</div>
+      <Link to="/">Signup</Link>
     </div>
   )
 }

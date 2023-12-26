@@ -1,41 +1,43 @@
-import { BiUser } from "react-icons/bi";
-import { BiLogoApple } from "react-icons/bi";
+import { Link } from "react-router-dom";
+import { Button, TextInput } from "flowbite-react";
+import { BiUser, BiLogoApple } from "react-icons/bi";
+import { FcGoogle } from "react-icons/fc";
 
 const Login = () => {
   return (
     <div className="flex justify-center my-12">
       <div className="text-center border w-[500px] rounded-2xl">
-        <div className="m-7">
-          <h1 className="text-3xl font-medium">Log in to Upwork</h1>
-        </div>
+        <h1 className="text-3xl font-medium m-7">Log in to Upwork</h1>
         <div className="flex justify-center mb-6">
-          <div className="flex w-[350px] items-center border rounded-lg">
-            <BiUser className="mx-4 text-xl" />
-            <input placeholder="Username or Email" className="outline-none py-2 text-sm w-full rounded-lg" />
-          </div>
+          <TextInput id="email4" type="email" icon={BiUser} className="w-[350px]" placeholder="Username or Email" required />
         </div>
-        <div>
-          <button className="bg-[#108A00] text-white py-2 w-[350px] rounded-full font-semibold">Continue with Email</button>
+        <div className="flex justify-center">
+          <Button className="w-[350px]" pill>Continue with Email</Button>
         </div>
         <div className="flex justify-center my-4">
           <div className="divider w-[350px]">or</div>
         </div>
-        <div>
-          <button className="bg-[#4285f4] text-white py-2 w-[350px] rounded-full font-semibold">Continue with Google</button>
+        <div className="flex justify-center my-4">
+          <Button color="blue" className="w-[350px]" pill>
+            <FcGoogle className="absolute left-0 bg-white rounded-full w-10 h-10 p-2" />
+            Continue with Google
+          </Button>
         </div>
-        <div className="flex justify-center mt-6">
-          <button className="flex justify-center items-center border-black border-[1px] py-2 w-[350px] rounded-full font-semibold">
+        <div className="flex justify-center my-4">
+          <Button color="light" className="w-[350px]" pill>
             <BiLogoApple className="mr-1" />
             Continue with Apple
-          </button>
+          </Button>
         </div>
         <div className="flex justify-center">
           <div className="divider mt-24 mb-6 w-[350px]">
             Don't have an Upwork account?
           </div>
         </div>
-        <div className="mt-6 mb-6">
-          <button className="border-2 border-green-600 text-green-600 pt-1 pb-2 w-[200px] rounded-full font-semibold">Sign Up</button>
+        <div className="flex justify-center my-6">
+          <Button as={Link} to={"/signup"} color="light" pill className="w-[200px] border-2 border-green-600 text-green-600">
+            Sign Up
+          </Button>
         </div>
       </div>
     </div>

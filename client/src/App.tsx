@@ -18,6 +18,10 @@ const App = () => {
         {
           path: "/signup",
           element: <Signup />
+        },
+        {
+          path: "*",
+          element: <></>
         }
       ]
     }
